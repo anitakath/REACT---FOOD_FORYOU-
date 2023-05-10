@@ -1,0 +1,213 @@
+
+
+:root{
+    --bgColor: hsla(0, 0%, 100%, 0.7);
+    --bgColorOpaque: hsla(0, 0%, 90%, 0.3);
+}
+
+
+
+.title{
+    background-color: var(--bgColorOpaque);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px black;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+   
+}
+
+
+
+.mealsContainer{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+
+
+
+
+/*-----------------------------------------MEALFIELD--------------------------------------------------------*/
+
+.mealField{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mealField h1{
+    color: white;
+}
+
+
+
+
+
+/*-----------------------------------------MEALITEM--------------------------------------------------------*/
+
+
+
+.mealItem{
+    border-bottom: 2px solid black;
+    width: 80vw;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: var(--bgColorOpaque);
+    margin: 40px 5px;
+    padding: 30px;
+}
+
+
+.mealInfoLeft, .mealInfoRight{
+    background-color: hsla(0, 0%, 0%, 0.9);
+    padding: 3px;
+    color: white;
+    height: 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.mealInfoRight{
+    min-width: 200px;
+}
+
+
+.mealInfoLeft h1, h2, h3{
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mealInfoLeft h1{
+    color:  hsla(39, 100%, 40%, 0.9);
+}
+
+
+.mealInfoMiddle{
+    height: 180px;
+    padding: 3px;
+    width: 500px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.mealImgContainer{
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    
+}
+
+.mealImgContainer img{
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+    z-index: 100;
+ 
+}
+
+
+
+.mealInfoRight input{
+    color: black;
+    font-weight: bolder;
+    width: 30px;
+    justify-content: center;
+    margin: 5px;
+    position: relative;
+    left: 15px;
+    border-radius: 0px;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    color: orange;
+    font-size: 1.1rem;
+   
+}
+
+.mealInfoRight input:hover{
+    border: 2px solid orange;
+}
+.mealInfoRight input:focus{
+    border: 2px solid orange;
+}
+.mealInfoRight input:active{
+    border: 2px solid orange;
+}
+
+.mealInfoRight label{
+    color: orange;
+    padding: 0 10px 0 0;
+}
+
+
+
+.addMealButton{
+    background-color: hsla(39, 100%, 40%, 0.9);
+    color: black;
+    width: 120px;
+    height: 40px;
+    border: none;
+    box-shadow: 2px 2px 1px grey;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 1rem;
+    
+}
+
+.addMealButton:active{
+    transform: scale(0.97);
+    transition: 0.2 ease;
+   
+}
+
+.addMealButton:focus{
+    background-color: hsla(39, 100%, 60%, 0.9);
+  
+}
+
+
+@media(max-width: 1200px){
+
+    .mealItem{
+        height: 500px;
+        flex-direction: column;
+    }
+
+    .mealInfoLeft, .mealInfoMiddle, .mealInfoRight{
+        width: 100%;
+        height: 100%;
+    }
+
+    .mealInfoRight{
+        padding: 20px;
+    }
+}

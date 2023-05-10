@@ -1,0 +1,119 @@
+
+:root{
+    --bgColor: hsla(0, 0%, 90%, 0.5);
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: hsla(39, 100%, 40%, 0.9);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 6px black;
+    z-index: 1000;
+}
+
+.headerImgContainer{
+    width: 100vw;
+    height: 25rem;
+    z-index: 0;
+    overflow: hidden;
+    /*background-color: hsla(300, 100%, 55%, 0.5);*/
+}
+
+.headerImgContainer img{
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+
+}
+
+
+/*----------------------------   HeaderCartButton  ------------------------------------*/
+
+.HeaderCartButtonContainer{
+    box-shadow: 2px 2px 1px black;
+    background-color: var(--bgColor);
+    border: 2px solid white;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 3px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.HeaderCartButtonContainer span{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin: 5px;
+}
+
+.HeaderCartButtonContainer:active{
+    transform: scale(0.98);
+    transition: 0.2s ease;
+}
+
+.cartCounter{
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1200px){
+   
+
+    .header h1{
+        transition: 0.4s ease;
+        position: relative;
+    }
+
+   
+
+    .HeaderCartButtonContainer{
+        position: relative;
+        right: -20px;
+        width: 180px;
+    }
+
+   
+}
+
+@media (max-width: 600px){
+
+    .header{
+        justify-content: center;
+    }
+
+
+    .header h1{
+        transition: 0.4s ease;
+        width: 400px;
+        position: relative;
+        left: -30px;
+        font-size: 1.5rem;
+    }
+}
